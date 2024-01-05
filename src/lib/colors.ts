@@ -11,4 +11,7 @@ export const colors = {
   emerald: { accent: "#0c6e54", dark: "#064e3b" },
   rose: { accent: "#ed2377", dark: "#871b48" },
   gray: { accent: "#555555", dark: "#27272a" },
+  darkblue: { accent: "#0b1c4d", dark: "#1e3a8a" },
+  darkyellow: { accent: "#4d320e", dark: "#78350f" },
+
 };

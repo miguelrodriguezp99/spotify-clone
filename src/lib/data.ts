@@ -14,7 +14,7 @@ export const playlists: Playlist[] = [
     id: '1',
     albumId: 1,
     title: "Chill Lo-Fi Music",
-    color: colors.yellow,
+    color: colors.darkyellow,
     cover:
       "https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353",
     artists: ["NoSpirit", "Casiio"],
@@ -23,7 +23,7 @@ export const playlists: Playlist[] = [
     id: '2',
     albumId: 2,
     title: "Lo-Fi Chill Session",
-    color: colors.green,
+    color: colors.darkblue,
     cover:
       "https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187",
     artists: ["Kupla", "Blue Fox"],

@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { allPlaylists, songs } from "../../lib/data";
 import PlayListItemCard from "../../components/PlayListItemCard.astro";
+import MusicsTable from "@/components/MusicsTable.astro";
 
 const { id } = Astro.params;
 
@@ -50,10 +51,17 @@ const playListSongs = songs.filter(
       </div>
     </header>
     <div
-      class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+      class=`absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context`
       style=`--context-color:${playlist?.color.accent}`
     >
+      <img
+        src={playlist?.cover}
+        alt={playlist?.title}
+        class="el-to-fade transition-all duration-500 z-[-1] absolute inset-0 mix-blend-overlay opacity-20 scale-90 w-full h-full object-cover blur-md"
+      />
     </div>
+
+    <MusicsTable songs={playListSongs} />
   </div>
 </Layout>
 

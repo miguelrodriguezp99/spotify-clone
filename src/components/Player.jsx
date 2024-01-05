@@ -82,14 +82,15 @@ const CurrentSong = ({ image, title, artists }) => {
 const SongControl = ({ audio }) => {
   const [currentTime, setCurrentTime] = useState(0);
 
+  
   useEffect(() => {
     audio.current.addEventListener("timeupdate", handleTimeUpdate);
-
     return () => {
       audio.current.removeEventListener("timeupdate", handleTimeUpdate);
     };
   }, []);
 
+  //Cada vez que pasa un segundo cambiamos el currentTime
   const handleTimeUpdate = () => {
     setCurrentTime(audio.current.currentTime);
   };
@@ -113,7 +114,7 @@ const SongControl = ({ audio }) => {
 
       <Slider
         value={[currentTime]}
-        max={audio?.current?.duration ?? 0}
+        max={duration}
         min={0}
         className="w-[400px]"
         onValueChange={(value) => {
