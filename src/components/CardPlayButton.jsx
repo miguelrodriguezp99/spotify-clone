@@ -43,11 +43,11 @@ export function CardPlayButton({ id }){
         className={!isPlayingPlaylist ? `absolute right-4 bottom-20 translate-y-4
           transition-all duration-500 opacity-0 
           group-hover:translate-y-0 group-hover:opacity-100 
-          z-10` 
+          z-10 `  
           : 
           `absolute right-4 bottom-20 translate-y-0
           transition-all duration-500 opacity-100  
-          z-10`}
+          z-10 `}
       >
         <button onClick={handleClick} className='card-play-button rounded-full bg-green-500 p-4'>
         {isPlayingPlaylist ? <Pause/> : <Play/>}

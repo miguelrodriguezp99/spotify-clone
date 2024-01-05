@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import { allPlaylists, songs } from "../../lib/data";
 import PlayListItemCard from "../../components/PlayListItemCard.astro";
 import MusicsTable from "@/components/MusicsTable.astro";
+import { CardPlayButton } from "@/components/CardPlayButton";
+import { PlaylistPlayButton } from "@/components/PlaylistPlayButton";
 
 const { id } = Astro.params;
 
@@ -50,6 +52,11 @@ const playListSongs = songs.filter(
         </div>
       </div>
     </header>
+
+    <div class="relative pl-6 pt-6">
+      <PlaylistPlayButton client:visible id={id} />
+    </div>
+
     <div
       class=`absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context`
       style=`--context-color:${playlist?.color.accent}`
