@@ -17,7 +17,8 @@ const playListSongs = songs.filter(
 <Layout title="Spotify Clone">
   <div
     id="playlist-container"
-    class="relative flex flex-col h-full transition-all duration-1000 bg-zinc-900 overflow-x-hidden"
+    class="relative flex flex-col h-full transition-all duration-1000 bg-zinc-900 overflow-x-hidden
+     scrollbar-hide"
     transition:name=`playlist ${id} box`
   >
     <header class="flex flex-row gap-8 px-6 mt-12">
@@ -72,4 +73,15 @@ const playListSongs = songs.filter(
   </div>
 </Layout>
 
-<style></style>
+<style>
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
